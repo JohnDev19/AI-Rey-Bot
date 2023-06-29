@@ -56,13 +56,13 @@
 	"license": "JOHNRÉ",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/Johnreyporas/AI-Rey-Bot"
+		"url": "git+https://github.com/Johnreyporas/AI-Rey-Bot.git"
 	},
 	"keywords": [],
 	"bugs": {
-		"url": "https://github.com/reybot-ver10/Reybot/issues"
+		"url": "https://github.com/Johnreyporas/AI-Rey-Bot/issues"
 	},
-	"homepage": "https://github.com/reybot-ver10/Reybot/blob/main/README.md",
+	"homepage": "https://github.com/Johnreyporas/AI-Rey-Bot/main/README.md",
 	"devDependencies": {
 		"eslint": "^8.2.0",
 		"eslint-config-airbnb": "^19.0.4",
