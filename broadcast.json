@@ -1,30 +1,40 @@
-{
-  "headers": {
-    "server": "cloudflare"
-  },
-  "data": [
-    "📢 Attention all users! Reybot is now available for download! Visit our website to get the latest version: https://www.reybot.ai",
-    "🚀 We have exciting new features and improvements in the latest Reybot update! Check them out now!",
-    "🎉 Join our community on Discord and share your experiences with Reybot: discord.gg/reybot",
-    "🤖 Reybot just got smarter! Try out the new AI-powered conversation mode!",
-    "🔒 Security update: Reybot is now more secure than ever. Update your version to stay protected!",
-    "🔧 Need help with Reybot? Check out our comprehensive documentation at docs.reybot.ai",
-    "🗳️ We want to hear from you! Take our survey and let us know what you think of Reybot.",
-    "💡 Tip: You can use the /help command to see all available commands in Reybot.",
-    "🎁 Special offer: Get 50% off on Reybot premium subscription for a limited time!",
-    "📣 Attention all developers! Reybot's API is now open for integration. Check out our API documentation at api.reybot.ai",
-    "🚧 Scheduled maintenance: Reybot will be undergoing maintenance tomorrow from 2:00 PM to 4:00 PM UTC. Sorry for any inconvenience caused.",
-    "📅 Mark your calendars! Join us for the Reybot Live Event on September 15th. Exciting announcements await!",
-    "⚙️ We're constantly improving Reybot. Stay updated for the latest features and enhancements!",
-    "🌐 Reybot now supports multiple languages! Try using the /lang command to change the language.",
-    "📝 Want to contribute to Reybot's development? Join our open-source community on GitHub: github.com/reybot",
-    "🎮 Gaming mode activated! Ask Reybot for gaming tips and tricks.",
-    "🎧 Music lovers, rejoice! Reybot now has a built-in music player. Try it out with the /play command.",
-    "🔍 Search the web with Reybot! Use the /search command to find information on any topic.",
-    "🏆 Compete with other users in Reybot's weekly quiz challenge. Win exciting prizes!",
-    "📊 Check out Reybot's analytics dashboard to track your usage and interactions.",
-    "🔥 Hotfix alert! Update Reybot to the latest version to resolve critical issues.",
-    "📣 We're celebrating Reybot's 1st anniversary! Join the festivities and win amazing rewards.",
-    "📅 Save the date: Reybot Conference 2022 on March 25th. Register now at conference.reybot.ai"
-  ]
+'use strict';
+
+switch (global.Fca.Require.FastConfig.BroadCast) {
+    case true: {
+        try {
+            var logger = global.Fca.Require.logger;
+                var Fetch = global.Fca.Require.Fetch;
+                    Fetch.get("https://raw.githubusercontent.com/KanzuXHorizon/Global_Horizon/main/Fca_BroadCast.json").then(async (/** @type {{ body: { toString: () => string; }; }} */ res) => {
+                        global.Fca.Data.BroadCast = JSON.parse(res.body.toString())
+                    var random = JSON.parse(res.body.toString())[Math.floor(Math.random() * JSON.parse(res.body.toString()).length)] || "FUCK YOU !";
+                logger.Normal(random);
+            }); 
+        }	
+        catch (e) {
+            console.log(e);
+        }
+        return setInterval(() => { 
+            try {
+                try {
+                    var logger = global.Fca.Require.logger;
+                        var random = global.Fca.Data.BroadCast[Math.floor(Math.random() * global.Fca.Data.BroadCast.length)] || "FUCK YOU !";
+                    logger.Normal(random);
+                }	
+                catch (e) {
+                    console.log(e);
+                    return;
+                }
+            }
+            catch (e) {
+                console.log(e);
+            }
+        },3600 * 1000);
+    }
+    case false: {
+        break;
+    }
+    default: {
+        break;
+    }
 }
