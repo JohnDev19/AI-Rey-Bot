@@ -2,7 +2,7 @@
 	"name": "REY BOT",
 	"version": "1.2.31",
 	"description": "Introducing Rey Bot, an advanced AI chatbot developed by the innovative mind of JOHN RÉ PORAS. Rey Bot stands as a testament to the seamless fusion of artificial intelligence and human-like conversational abilities. With its exceptional intelligence and natural language processing capabilities, Rey Bot provides users with an unparalleled interactive experience.",
-	"main": "index.js",
+	"main": "john.js",
 	"engines": {
 		"node": "16.x",
 		"npm": ">=7.0.0"
